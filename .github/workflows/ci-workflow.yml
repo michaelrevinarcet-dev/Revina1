@@ -1,0 +1,13 @@
+name: CI Workflow Demo # The name of your workflow, visible in the "Actions" tab
+
+on: [push] # Triggers the workflow on a push event to any branch
+
+jobs: # Groups together all the jobs in the workflow
+  build-and-test: # The ID of the job
+    runs-on: ubuntu-latest # Specifies the runner environment
+    steps: # Sequence of tasks the job will execute
+      - uses: actions/checkout@v4 # Action to check out your repository code
+      - name: Install dependencies # Name for the step, shown in the UI
+        run: npm install # Runs a shell command to install dependencies
+      - name: Run tests
+        run: npm test # Runs the test script defined in your package.json
