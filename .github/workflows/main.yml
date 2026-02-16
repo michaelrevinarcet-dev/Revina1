@@ -1,0 +1,25 @@
+# A basic YAML configuration file
+---
+name: John Doe # Key-value pair with a string value
+age: 30       # Integer value
+is_active: true # Boolean value (use lowercase true/false)
+salary: 75000.50 # Float value
+
+address: # Nested dictionary (mapping)
+  street: 123 Tornado Alley
+  city: East Centerville
+  state: KS
+  zip: "12345" # Quotes ensure "12345" is treated as a string, not an integer
+
+phone_numbers: # List (sequence) of strings
+  - "555-1234"
+  - "555-5678"
+
+# A list of objects (dictionaries)
+employees:
+  - name: Alice
+    role: Developer
+    department: Engineering
+  - name: Bob
+    role: Designer
+    department: UX
